@@ -1,0 +1,19 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: lightpink;
+	.logo {
+		height: 8vh;
+	}
+
+	.navbar {
+		display: flex;
+		flex-direction: row;
+
+		.item {
+			margin: 10px;
+		}
+	}
+}
