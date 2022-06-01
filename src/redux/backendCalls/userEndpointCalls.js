@@ -1,7 +1,7 @@
 import { BACKEND_PATH } from "../../App";
 
 export const loginCall = async (data) => {
-  const response = await fetch(`${BACKEND_PATH}/api/users/login`, {
+  let response = await fetch(`${BACKEND_PATH}/api/users/login`, {
     method: "POST",
     mode: "cors",
     cache: "no-cache",
@@ -11,10 +11,7 @@ export const loginCall = async (data) => {
     },
     referrerPolicy: "no-referrer",
     body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      return data;
-    });
+  });
+  response = await response.json();
   return response;
 };
